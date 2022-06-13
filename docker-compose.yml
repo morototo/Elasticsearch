@@ -12,6 +12,16 @@ services:
       memlock:
         soft: -1
         hard: -1
+    networks:
+      - esnet
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+      - ./install-plugin.sh:/tmp/install-plugin.sh
+    entrypoint: >
+       bash -c "chmod +x /tmp/install-plugin.sh &&
+                /tmp/install-plugin.sh analysis-kuromoji && 
+                /tmp/install-plugin.sh repository-s3 && 
+               docker-entrypoint.sh"
 
   kibana:
     image: docker.elastic.co/kibana/kibana:8.0.0
@@ -19,3 +29,12 @@ services:
       ELASTICSEARCH_HOSTS: http://elasticsearch:9200
     ports:
        - 5601:5601
+    networks:
+      - esnet
+
+volumes:
+  esdata:
+    driver: local
+
+networks:
+  esnet:
