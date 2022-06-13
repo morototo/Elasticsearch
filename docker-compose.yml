@@ -19,7 +19,7 @@ services:
       - ./install-plugin.sh:/tmp/install-plugin.sh
     entrypoint: >
        bash -c "chmod +x /tmp/install-plugin.sh &&
-                /tmp/install-plugin.sh analysis-kuromoji && 
+                /tmp/install-plugin.sh ${PLUGIN} && 
                 /tmp/install-plugin.sh repository-s3 && 
                docker-entrypoint.sh"
 
