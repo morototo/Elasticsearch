@@ -1,0 +1,26 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "morokado_analyzer": {
+          "type": "custom",
+          "tokenizer": "kuromoji_tokenizer",
+          "filter": [
+            "kuromoji_baseform"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+      "properties": {
+        "content": {
+          "type": "text",
+          "analyzer": "morokado_analyzer"
+       },
+       "content_without_analyzer": {
+        "type": "text"
+     }
+    }
+  }
+}
