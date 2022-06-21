@@ -26,3 +26,8 @@ $ PLUGIN=analysis-kuromoji docker-compose -f docker-compose-in-plugin.yml up -d
 ```
 $ sh data/kuromoji_baseform_token_filter.sh
 ```
+
+- kuromoji_part_of_speech token filter
+```
+$ sh data/kuromoji_part_of_speech_token_filter.sh
+```
