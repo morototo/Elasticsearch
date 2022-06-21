@@ -1,0 +1,26 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "part_of_speech_token_analyzer": {
+          "type": "custom",
+          "tokenizer": "kuromoji_tokenizer",
+          "filter": [
+            "kuromoji_part_of_speech"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+      "properties": {
+        "content": {
+          "type": "text",
+          "analyzer": "part_of_speech_token_analyzer"
+       },
+       "content_without_analyzer": {
+        "type": "text"
+     }
+    }
+  }
+}
