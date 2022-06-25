@@ -1,0 +1,26 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "stemmer": {
+          "type": "custom",
+          "tokenizer": "kuromoji_tokenizer",
+          "filter": [
+            "kuromoji_stemmer"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+      "properties": {
+        "content": {
+          "type": "text",
+          "analyzer": "stemmer"
+       },
+       "content_without_analyzer": {
+        "type": "text"
+     }
+    }
+  }
+}

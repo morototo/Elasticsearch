@@ -31,3 +31,8 @@ $ sh data/kuromoji_baseform_token_filter.sh
 ```
 $ sh data/kuromoji_part_of_speech_token_filter.sh
 ```
+
+- kuromoji_stemmer token filter
+```
+$ sh data/kuromoji_stemmer_token_filter.sh
+```
