@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "ja_stop_filter": {
+          "type": "custom",
+          "tokenizer": "kuromoji_tokenizer",
+          "filter": [
+            "ja_stop"
+          ]
+        },
+        "only_analyzer": {
+          "type": "custom",
+          "tokenizer": "kuromoji_tokenizer"
+        }
+      },
+      "filter": {
+        "ja_stop": {
+          "type": "ja_stop",
+          "stopwords": [
+            "_japanese_",
+            "サーバー"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+      "properties": {
+        "content": {
+          "type": "text",
+          "analyzer": "ja_stop_filter"
+       },
+       "content_without_analyzer": {
+        "type": "text",
+        "analyzer": "only_analyzer"
+     }
+    }
+  }
+}
