@@ -4,7 +4,7 @@
       "must": [
         {
           "match": {
-            "content": "サーバー"
+            "content": "私は"
           }
         }
       ]

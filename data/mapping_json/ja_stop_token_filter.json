@@ -13,15 +13,6 @@
           "type": "custom",
           "tokenizer": "kuromoji_tokenizer"
         }
-      },
-      "filter": {
-        "ja_stop": {
-          "type": "ja_stop",
-          "stopwords": [
-            "_japanese_",
-            "サーバー"
-          ]
-        }
       }
     }
   },
