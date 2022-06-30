@@ -36,3 +36,8 @@ $ sh data/kuromoji_part_of_speech_token_filter.sh
 ```
 $ sh data/kuromoji_stemmer_token_filter.sh
 ```
+
+- ja_stop token filter
+```
+$ sh data/ja_stop_token_filter.sh
+```

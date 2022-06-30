@@ -1,0 +1,13 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "contentcontent_without_analyzer": "私は"
+          }
+        }
+      ]
+    }
+  }
+}
