@@ -41,3 +41,8 @@ $ sh data/kuromoji_stemmer_token_filter.sh
 ```
 $ sh data/ja_stop_token_filter.sh
 ```
+
+- kuromoji_iteration_mark character filter
+```
+$ sh data/kuromoji_iteration_mark_char_filter.sh
+```
