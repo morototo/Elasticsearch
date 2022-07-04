@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "kuromoji_iteration_mark_filter": {
+          "type": "custom",
+          "tokenizer": "kuromoji_tokenizer",
+          "char_filter" : ["kuromoji_iteration_mark"]
+        },
+        "only_analyzer": {
+          "type": "custom",
+          "tokenizer": "kuromoji_tokenizer"
+        }
+      }
+    }
+  },
+  "mappings": {
+      "properties": {
+        "content": {
+          "type": "text",
+          "analyzer": "kuromoji_iteration_mark_filter"
+       },
+       "content_without_analyzer": {
+        "type": "text",
+        "analyzer": "only_analyzer"
+      }
+    }
+  }
+}
