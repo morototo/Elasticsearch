@@ -46,3 +46,8 @@ $ sh data/ja_stop_token_filter.sh
 ```
 $ sh data/kuromoji_iteration_mark_char_filter.sh
 ```
+
+- kuromoji_readingform token filter
+```
+$ sh data/kuromoji_readingform_token_filter.sh
+```
