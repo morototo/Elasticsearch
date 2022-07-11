@@ -13,6 +13,7 @@ $ docker-compose up -d
 ## Pluginを指定して起動
 ```
 $ PLUGIN=analysis-kuromoji docker-compose -f docker-compose-in-plugin.yml up -d
+$ PLUGIN=analysis-icu docker-compose -f docker-compose-in-plugin.yml up -d
 ```
 
 ## PLUGIN指定リスト
@@ -55,4 +56,9 @@ $ sh data/kuromoji_readingform_token_filter.sh
 - kuromoji_number token filter
 ```
 $ sh data/kuromoji_number_token_filter.sh
+```
+
+- icu_normalizer char filter
+```
+$ sh data/icu_normalizer_char_filter.sh
 ```
