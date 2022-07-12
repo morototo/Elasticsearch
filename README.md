@@ -62,3 +62,8 @@ $ sh data/kuromoji_number_token_filter.sh
 ```
 $ sh data/icu_normalizer_char_filter.sh
 ```
+
+- icu_folding token filter
+```
+$ sh data/icu_folding_token_filter.sh
+```
