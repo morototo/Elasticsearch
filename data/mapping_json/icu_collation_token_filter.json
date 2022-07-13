@@ -1,0 +1,32 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "only_icu_analyzer": {
+          "type": "custom",
+          "tokenizer": "icu_tokenizer"
+        }
+      }
+    }
+  },
+  "mappings": {
+      "properties": {
+        "content": {
+          "type": "text",
+          "analyzer": "only_icu_analyzer",
+          "fields": {
+            "sort": {  
+              "type": "icu_collation_keyword",
+              "index": false,
+              "language": "ja",
+              "country": "JA"
+            }
+          }
+       },
+       "content_without_analyzer": {
+        "type": "text",
+        "analyzer": "only_icu_analyzer"
+     }
+    }
+  }
+}
