@@ -68,7 +68,13 @@ $ sh data/icu_normalizer_char_filter.sh
 $ sh data/icu_folding_token_filter.sh
 ```
 
+<<<<<<< HEAD
 - icu_collation token filter
 ```
 $ sh data/icu_collation_token_filter.sh
+=======
+- icu_transform token filter
+```
+$ sh data/icu_transform_token_filter.sh
+>>>>>>> main
 ```

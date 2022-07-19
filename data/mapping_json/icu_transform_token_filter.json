@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "icu_transform_token_filter": { 
+          "tokenizer": "icu_tokenizer",
+          "filter": [
+            "LatinTransform"
+          ]
+        },
+        "only_icu_analyzer": {
+          "type": "custom",
+          "tokenizer": "icu_tokenizer"
+        }
+      },
+      "filter": {
+        "LatinTransform": {
+          "type": "icu_transform",
+          "id": "Any-Latin; NFD; [:Nonspacing Mark:] Remove; NFC" 
+        }
+      }
+    }
+  },
+  "mappings": {
+      "properties": {
+        "content": {
+          "type": "text",
+          "analyzer": "icu_transform_token_filter"
+       },
+       "content_without_analyzer": {
+        "type": "text",
+        "analyzer": "only_icu_analyzer"
+     }
+    }
+  }
+}
