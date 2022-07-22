@@ -1,28 +1,24 @@
 # Emvironment
 
-## 事前準備
-```
-TBD
-```
+## Prepare
+- [Install Docker](https://docs.docker.com/engine/install/)
+- [Install Docker-compose](https://docs.docker.com/compose/install/)
 
-## Elasticsearchの起動
+## Launch by specifying the Plugin
 ```
-$ docker-compose up -d
-```
-
-## Pluginを指定して起動
-```
+※ To verify the analysis-kuromoji plugin
 $ PLUGIN=analysis-kuromoji docker-compose -f docker-compose-in-plugin.yml up -d
+※ To verify the analysis-icu plugin
 $ PLUGIN=analysis-icu docker-compose -f docker-compose-in-plugin.yml up -d
 ```
 
-## PLUGIN指定リスト
-|pugin name|URL|
+## Plugin designation list
+|plugin name|URL|
 | --- | --- |
 |analysis-kuromoji|https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html|
 |analysis-icu|https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu.html|
 
-# Plugin 比較コマンド
+# Plugin verification commands
 - kuromoji_baseform token filter
 ```
 $ sh data/kuromoji_baseform_token_filter.sh
