@@ -1,4 +1,4 @@
-# Emvironment
+# Environment
 
 ## Prepare
 - [Install Docker](https://docs.docker.com/engine/install/)
